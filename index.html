@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Carrega folha de estilos e arquivo de scripts -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ismael Ferreira - CV</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- Barra de navegação simples, com quatro links em formato de botões com uma animação de fade ao carregar a página -->
+    <div class="barra-navegacao animacao">
+        <h1  class="titulo">Ismael Ferreira - Curriculum Vitae</h1>
+        <div class="menu-superior">
+            <!-- Ao clicar no link, ativa uma função do javascript que faz um efeito de fadein na seção selecionada. -->
+            <a href="#sobre-mim" class="menu-item" onclick="ativarAnimacao('sobre-mim-secao')">Sobre mim</a>
+            <a href="#formacao" class="menu-item" onclick="ativarAnimacao('formacao-secao')">Formação</a>
+            <a href="#portifolio" class="menu-item" onclick="ativarAnimacao('portifolio-secao')">Portifólio</a>
+            <a href="#contato" class="menu-item" onclick="ativarAnimacao('contato-secao')">Contato</a>
+        </div>
+    </div>     
+    <!-- Início das seções - Possuem um título com heading + uma div para conteúdo e cards internos, sendo cada um uma div -->
+    <h2 id="sobre-mim" >Sobre mim</h2>
+    <div id="sobre-mim-secao" class="secao sobre-mim-secao">     
+        <div class="card">
+            <h3>Dados pessoais</h3>
+            <!-- Usa lista não numerada para formatar itens descritivos -->
+            <ul>
+                <li>32 anos</li>
+                <li>Solteiro</li>
+                <li>Natural de Porto Alegre/RS/Brasil</li>
+                <li>Residente de Canoas/RS/Brasil</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Mais informações</h3>
+            <ul>
+                <li>Habilitação de Motorista Cat. B</li>
+                <!-- Link que redireciona para site externo -->
+                <li><a href="https://www.linkedin.com/in/ismael-ferreira-4a142a91">Rede Social</a></li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Hobbies</h3>
+            <ul>
+                <li>Assistir a eventos esportivos</li>
+                <li>Ler livros de ficção</li>
+                <li>Jogar videogame</li>
+            </ul>
+        </div>
+    </div>  
+    <h2 id="formacao">Formação</h2>
+    <div id="formacao-secao" class="secao formacao-secao">     
+        <div class="card">
+            <h3>Educação Básica</h3>
+            <h4>Ensino médio concluído</h4>
+            <ul>
+                <li>Fundação Escola Técnica Liberato Salzano Vieira da Cunha</li>
+                <li>Novo Hamburgo/RS</li>
+                <li>Concluído em 2011</li>                
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Ensino Superior</h3>
+            <h4>Ensino superior concluído</h4>
+            <ul>
+                <li>Licenciatura em História</li>
+                <li>Universidade do Vale do Rio dos Sinos - UNISINOS</li>
+                <li>São Leopoldo/RS</li>
+                <li>Concluído em 2020</li>
+            </ul>
+            <h4>Ensino superior em andamento</h4>
+            <ul>
+                <li>Bacharelado em Ciência da Computação</li>
+                <li>Centro Universitário Internacional - UNINTER</li>
+                <li>Curitiba/PR</li>
+                <li>Conclusão em 2027</li>
+            </ul>
+
+        </div>
+        <div class="card">
+            <h3>Outras formações</h3>
+            <h4>Ensino técnico concluído</h4>
+            <ul>
+                <li>Fundação Escola Técnica Liberato Salzano Vieira da Cunha</li>
+                <li>Novo Hamburgo/RS</li>
+                <li>Concluído em 2012</li>                
+            </ul>
+            <h4>Nível de inglês: avançado</h4>
+            <ul>
+                <li>Conversação</li>
+                <li>Escrita</li>
+                <li>Leitura (casual e técnica)</li>                
+            </ul>
+        </div>
+    </div>  
+    <div id="portifolio">
+        <h2>Portifólio</h2>
+        <div id="portifolio-secao" class="secao portifolio-secao">     
+            <!-- Exibe o portifólio em formato de imagem. -->
+            <div class="card">
+                <h3>Pro Tune Analyzer</h3>
+                <img class="imagem-portifolio" src="./assets/analyzer.png" alt="tela do Pro Tune Analyzer">
+                <!-- Link externo para o site da empresa onde trabalhei. -->
+                <span>Programa de análise de dados automotivos. <a href="https://www.protune.com.br">Mais informações</a></span>
+            </div>
+            <div class="card">
+                <h3>Pro Tuine Dash Editor</h3>
+                <img class="imagem-portifolio" src="./assets/editor.png" alt="tela do Pro Tune Dash Editor">
+                <span>Programa de edição de painéis para carros. <a href="https://www.protune.com.br">Mais informações</a></span>    
+            </div>
+            <div class="card">
+                <h3>Pro Tuine Workbench</h3>
+                <img class="imagem-portifolio" src="./assets/workbench.png" alt="tela do Pro Tune Workbenchr">
+                <span>Programa de gerenciamento de injeção eletrônica. <a href="https://www.protune.com.br">Mais informações</a></span>    
+            </div>
+        </div>  
+    </div>
+    <div id="contato" class="contato-secao">
+        <!-- Formulário simples (sem ação, apenas com inputs) -->
+        <h2>Contato</h2>        
+            <form id="contato-secao" class="formulario">
+                <h3>Entre em contato</h3>
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit" class="button">Enviar</button>
+            </form>        
+    </div>
+</body>
+</html>
